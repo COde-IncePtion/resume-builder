@@ -1,4 +1,5 @@
 export const colors = {
     grey: '#303d46',
-    white: '#fff'
+    white: '#fff',
+    iconColor: '#479099'
 };
