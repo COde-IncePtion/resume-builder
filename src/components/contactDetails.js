@@ -5,7 +5,7 @@ import * as Theme from '../theme';
 const spanStyle = {
     display: 'flex',
     alignItems: 'center',
-    fontFamily: 'Lato, sans-serif',
+    fontFamily: Theme.fontFamily,
     height: '30px',
     margin: '2px 0'
 };
@@ -17,13 +17,13 @@ const contactDetailsLayoutStyle = {
 };
 
 const IconStyle = {
-    padding: '0 18px',
-    color: Theme.colors.iconColor
+    paddingLeft: '18px',
+    color: Theme.colors.lightBlue
 };
 
 const FontAwesomeIconStyle = {
-    padding: '0 18px',
-    color: Theme.colors.iconColor,
+    paddingLeft: '18px',
+    color: Theme.colors.lightBlue,
     fontSize: '1.5rem'
 }
 
