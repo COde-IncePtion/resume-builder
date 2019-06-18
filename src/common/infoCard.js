@@ -3,16 +3,15 @@ import {Title} from "../components/title";
 import {colors} from "../theme";
 
 const InfoCardStyle = {
-    width: '50%',
     lineHeight: '22px',
-    position: 'relative'
+    marginBottom: '30px'
 };
 
 const LocationWorkPeriodStyle = {
     display: 'flex',
     justifyContent: 'space-between',
     padding: '0 4px',
-    margin: '8px 0'
+    margin: '5px 0'
 };
 
 const TaskDisplaySectionStyle = {
@@ -54,10 +53,10 @@ const TaskSectionStyle = {
     display: 'flex',
 }
 
-export const InfoCard = ({cardInfo}) => {
+export const InfoCard = ({cardInfo, cardTitle}) => {
     return (
         <div style={InfoCardStyle}>
-            <Title text={cardInfo.role} fontSize='24px' fontWeight='700' padding='4px 0' margin='unset'
+            <Title text={cardInfo.role} fontSize='24px' fontWeight='700' padding='0 0 4px 0' margin='unset'
                    textAlign='left'/>
             <Title text={cardInfo.companyName} fontSize='24px' fontWeight='400' padding='4px 0' margin='unset'
                    textAlign='left'/>
@@ -70,10 +69,10 @@ export const InfoCard = ({cardInfo}) => {
             <div style={TaskSectionStyle}>
                 <div style={LeftBorderStyle}></div>
                 <div style={TaskDisplaySectionStyle}>
-                    <Title text='Achievements/Tasks' color={colors.lightBlue} fontSize='16px' fontStyle='italic'
+                    <Title text={cardTitle} color={colors.lightBlue} fontSize='16px' fontStyle='italic'
                            margin='unset' textAlign='left'/>
                     {cardInfo.tasks.map(task =>
-                        <div style={TaskTileStyle}>
+                        <div style={TaskTileStyle} key={task}>
                             <i className="material-icons" style={DashIconStyle}>minimize</i>
                             <Title key={task} text={task} textAlign='left' fontSize='18px' margin='unset'/>
                         </div>)

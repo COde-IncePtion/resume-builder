@@ -2,6 +2,7 @@ import React from 'react';
 import {Cell} from "../common/cell";
 import {Title} from "./title";
 import {colors} from "../theme";
+import {SectionLine} from "./SectionLine";
 
 
 function generateSkillCells(skill) {
@@ -12,18 +13,13 @@ const SkillCellsLayoutStyle = {
     display: 'flex',
     flexWrap: 'wrap',
     padding: '10px 42px',
-    marginTop: '5px',
-    borderTop: `2px solid ${colors.lightBlue}`
 };
-
-const SkillSectionLayout = {
-    width: '500px'
-}
 
 export const Skills = ({skills}) => {
     return (
-        <div style={SkillSectionLayout}>
-            <Title text='SKILLS' fontWeight='700' fontSize='28px' textAlign='left' margin='0px 50px' />
+        <div>
+            <Title text='SKILLS' fontWeight='700' fontSize='28px' textAlign='left' margin='0 0 4px 50px'/>
+            <SectionLine/>
             <div style={SkillCellsLayoutStyle}>
                 {skills.map(skill => generateSkillCells(skill))}
             </div>

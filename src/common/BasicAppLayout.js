@@ -8,7 +8,7 @@ const appStyle = {
     height: '1500px',
     display: 'flex',
     justifyContent: 'center',
-    padding: '50px 50px'
+    padding: '50px 0'
 }
 export const BasicLayout = () => (
     <div style={appStyle}>
