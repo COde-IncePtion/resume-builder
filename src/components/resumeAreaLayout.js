@@ -2,18 +2,22 @@ import React from 'react';
 import * as Theme from '../theme';
 import {ContactDetails} from "./contactDetails";
 import {PersonalDetails} from "./personalDetails";
+import {Skills} from "./skills";
+import {Title} from "./title";
 
 const appStyle = {
     background: Theme.colors.white,
     width: '1224px',
-    height: '1500px'
+    height: '1500px',
+    padding: '50px 30px'
 };
 
 const FirstSectionStyle = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '60px 50px'
+    marginLeft:'20px',
+    marginBottom:'20px'
 }
 
 const data = {
@@ -32,7 +36,8 @@ const data = {
         name: 'ThoughtWorks Technologies',
         role: 'Application Developer'
     },
-    aim: 'To continue my career with an organisation that will utilize my TECHNICAL and INTELLECTUAL ability for bilateral growth.'
+    aim: 'To continue my career with an organisation that will utilize my TECHNICAL and INTELLECTUAL ability for bilateral growth.',
+    technicalSkills:['Java', 'C++', 'Python', 'ReactJs', 'Redux', 'Springboot', 'BootStrap', 'JavaScript', 'Asp.NET', 'Elastic Search']
 };
 
 
@@ -42,6 +47,8 @@ export const ResumeAreaLayout = () => (
             <PersonalDetails companyDetails={data.companyDetails} personalDetails={data.personalDetails}/>
             <ContactDetails contactDetails={data.contactDetails}/>
         </div>
+        <Title text={data.aim} fontSize='18px' textAlign='left'/>
+        <Skills skills={data.technicalSkills}/>
     </div>
 );
 

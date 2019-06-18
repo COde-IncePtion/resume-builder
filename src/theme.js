@@ -4,4 +4,4 @@ export const colors = {
     lightBlue: '#479099'
 };
 
-export const fontFamily = 'B612, sans-serif';
+export const fontFamily = 'Ubuntu, sans-serif';

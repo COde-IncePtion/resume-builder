@@ -1,7 +1,6 @@
 import React from 'react';
 import * as Theme from '../theme';
 
-
 const PersonalDetailsLayout = {
     display: 'flex',
     fontFamily: Theme.fontFamily,
