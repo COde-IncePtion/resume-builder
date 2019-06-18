@@ -14,7 +14,7 @@ const SkillCellStyle = {
     margin: '8px 6px'
 };
 
-export const SkillCell = ({skillName}) => {
+export const Cell = ({skillName}) => {
     return (
         <span style={SkillCellStyle}>{skillName}</span>
     );

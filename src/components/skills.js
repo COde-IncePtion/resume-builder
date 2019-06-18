@@ -1,11 +1,11 @@
 import React from 'react';
-import {SkillCell} from "./skillCell";
+import {Cell} from "../common/cell";
 import {Title} from "./title";
 import {colors} from "../theme";
 
 
 function generateSkillCells(skill) {
-    return <SkillCell key={skill} skillName={skill}/>
+    return <Cell key={skill} skillName={skill}/>
 }
 
 const SkillCellsLayoutStyle = {

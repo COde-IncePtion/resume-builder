@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Theme from '../theme';
+import {Title} from "./title";
 
 const PersonalDetailsLayout = {
     display: 'flex',
@@ -14,12 +15,6 @@ const displayPicStyle = {
     borderColor: '#C0C0C0',
     marginRight: '50px'
 };
-
-const DisplayNameStyle = {
-    fontWeight: 900,
-    fontSize: '44px',
-    margin: 'unset'
-}
 
 const ProfileNameStyle = {
     fontWeight: 700,
@@ -36,7 +31,8 @@ export const PersonalDetails = ({personalDetails, companyDetails}) => {
         <div style={PersonalDetailsLayout}>
             <img style={displayPicStyle} src={require('../static/displayPic.jpg')}/>
             <div>
-                <p style={DisplayNameStyle}>{`${personalDetails.firstName} ${personalDetails.lastName}`}</p>
+                <Title text={`${personalDetails.firstName} ${personalDetails.lastName}`} fontSize='44px'
+                       fontWeight='900' margin='unset'/>
                 <p style={ProfileNameStyle}>{companyDetails.role}</p>
             </div>
         </div>

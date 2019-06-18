@@ -2,8 +2,8 @@ import React from 'react';
 import * as Theme from '../theme';
 import {ContactDetails} from "./contactDetails";
 import {PersonalDetails} from "./personalDetails";
-import {Skills} from "./skills";
 import {Title} from "./title";
+import {InfoCard} from "../common/infoCard";
 
 const appStyle = {
     background: Theme.colors.white,
@@ -16,8 +16,8 @@ const FirstSectionStyle = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginLeft:'20px',
-    marginBottom:'20px'
+    marginLeft: '20px',
+    marginBottom: '20px'
 }
 
 const data = {
@@ -37,7 +37,24 @@ const data = {
         role: 'Application Developer'
     },
     aim: 'To continue my career with an organisation that will utilize my TECHNICAL and INTELLECTUAL ability for bilateral growth.',
-    technicalSkills:['Java', 'C++', 'Python', 'ReactJs', 'Redux', 'Springboot', 'BootStrap', 'JavaScript', 'Asp.NET', 'Elastic Search']
+    technicalSkills: ['Java', 'C++', 'Python', 'ReactJs', 'Redux', 'Springboot', 'BootStrap', 'JavaScript', 'Asp.NET', 'Elastic Search'],
+    workExperience: [
+        {
+            companyName: 'ThoughtWorks Technologies India Private Limited',
+            role: 'Application Developer',
+            workPeriod: {
+                startDate: '01/2017',
+                endDate: '02/2017'
+            },
+            location: 'Pune, India',
+            tasks: ['Worked on developing web app for a big UK firm which dealt with financial data and information providing.',
+                'The platform was developed to connect giant investors and fund managers.',
+                'Worked in a team driven by Agile practises.',
+                'Practised TDD and pair programming.',
+            ]
+        }
+        , {}
+    ]
 };
 
 
