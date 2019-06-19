@@ -4,7 +4,8 @@ import {colors} from "../theme";
 
 const InfoCardStyle = {
     lineHeight: '22px',
-    marginBottom: '30px'
+    marginBottom: '30px',
+    flexGrow:1
 };
 
 const LocationWorkPeriodStyle = {
@@ -16,7 +17,8 @@ const LocationWorkPeriodStyle = {
 
 const TaskDisplaySectionStyle = {
     padding: '0 10px',
-    paddingBottom: '10px'
+    paddingBottom: '10px',
+    flexGrow: 1
 };
 
 const TaskTileStyle = {
@@ -58,10 +60,10 @@ export const InfoCard = ({cardInfo, cardTitle}) => {
         <div style={InfoCardStyle}>
             <Title text={cardInfo.role} fontSize='24px' fontWeight='700' padding='0 0 4px 0' margin='unset'
                    textAlign='left'/>
-            <Title text={cardInfo.companyName} fontSize='24px' fontWeight='400' padding='4px 0' margin='unset'
+            <Title text={cardInfo.organizationName} fontSize='24px' fontWeight='400' padding='4px 0' margin='unset'
                    textAlign='left'/>
             <div style={LocationWorkPeriodStyle}>
-                <Title text={`${cardInfo.workPeriod.startDate} - ${cardInfo.workPeriod.endDate}`} fontSize='16px'
+                <Title text={`${cardInfo.timeSpan.startDate} - ${cardInfo.timeSpan.endDate}`} fontSize='16px'
                        color={colors.lightBlue} fontStyle='italic' margin='unset'/>
                 <Title text={cardInfo.location} color={colors.lightBlue} fontSize='16px' fontStyle='italic'
                        margin='unset'/>

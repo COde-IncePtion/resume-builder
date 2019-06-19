@@ -8,7 +8,8 @@ const WorkExperienceLayoutStyle = {
     display: 'flex'
 }
 const WorkExpTilesStyle = {
-    paddingLeft: '20px'
+    paddingLeft: '20px',
+    flexGrow: 1
 };
 
 const borderStyle = {
@@ -38,21 +39,21 @@ const circle = {
     borderWidth: '4px'
 };
 
-export const WorkExperience = ({workExperiences}) => {
+export const InfoSection = ({sectionHeader, sectionData, taskInfoSectionTitle}) => {
     return (
         <div>
-            <Title text='WORK EXPERIENCE' fontWeight='700' fontSize='28px' textAlign='left' margin='unset'
+            <Title text={sectionHeader} fontWeight='700' fontSize='28px' textAlign='left' margin='unset'
                    margin='0 0 4px 50px'/>
             <SectionLine/>
             <div style={WorkExperienceLayoutStyle}>
                 <div style={WorkExpTilesStyle}>
-                    {workExperiences.map((workExperience, index) =>
+                    {sectionData.map((info, index) =>
                         <div style={WorkExpTileStyle}>
                             <div style={InfoCardTileBoundaryStyle}>
                                 <span style={circle}></span>
-                                {index != workExperiences.length - 1 && <span style={borderStyle}></span>}
+                                {index != sectionData.length - 1 && <span style={borderStyle}></span>}
                             </div>
-                            <InfoCard key={workExperience.workPeriod.startDate} cardInfo={workExperience} cardTitle='Achievements/Tasks'/>
+                            <InfoCard key={info.timeSpan.startDate} cardInfo={info} cardTitle={taskInfoSectionTitle}/>
                         </div>
                     )}
                 </div>

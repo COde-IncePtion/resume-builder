@@ -3,8 +3,9 @@ import * as Theme from '../theme';
 import {ContactDetails} from "./contactDetails";
 import {PersonalDetails} from "./personalDetails";
 import {Title} from "./title";
-import {WorkExperience} from "./workExperience";
 import {Skills} from "./skills";
+import {WorkExperiences} from "./workExperinceDetails";
+import {EducationDetails} from "./educationDetails";
 
 const appStyle = {
     background: Theme.colors.white,
@@ -40,9 +41,9 @@ const data = {
     technicalSkills: ['Java', 'C++', 'Python', 'ReactJs', 'Redux', 'Springboot', 'BootStrap', 'JavaScript', 'Asp.NET', 'Elastic Search'],
     workExperiences: [
         {
-            companyName: 'ThoughtWorks Technologies India',
+            organizationName: 'ThoughtWorks Technologies India',
             role: 'Application Developer',
-            workPeriod: {
+            timeSpan: {
                 startDate: '09/2017',
                 endDate: 'Present'
             },
@@ -54,9 +55,9 @@ const data = {
             ]
         }
         , {
-            companyName: 'ThoughtWorks Technologies India',
+            organizationName: 'ThoughtWorks Technologies India',
             role: 'Application Developer - Internship',
-            workPeriod: {
+            timeSpan: {
                 startDate: '01/2017',
                 endDate: '02/2017'
             },
@@ -67,6 +68,35 @@ const data = {
                 'Practised TDD and pair programming.'
             ]
         }
+    ],
+    educationDetails: [
+        {
+            organizationName: 'Kendriya Vidyalaya No.3, New Delhi',
+            role: '10th',
+            tasks: ["science"],
+            timeSpan: {
+                startDate: '01/2017',
+                endDate: '02/2017'
+            }
+        },
+        {
+            organizationName: 'Kendriya Vidyalaya No.3, New Delhi',
+            role: '12th',
+            tasks: ['science'],
+            timeSpan: {
+                startDate: '04/2012',
+                endDate: '03/2013'
+            }
+        },
+        {
+            organizationName: 'Army Institute of Technology',
+            role: 'Bachelor of Engineering',
+            tasks: ['Information And Technology'],
+            timeSpan: {
+                startDate: '04/2010 ',
+                endDate: '03/2011'
+            }
+        }
     ]
 };
 
@@ -76,7 +106,9 @@ const WorkXandSkillSectionStyle = {
 
 const WorkExperienceSectionStyle = {
     marginRight: '10px',
-    width: '50%'
+    width: '50%',
+    display: 'flex',
+    flexDirection: 'column'
 };
 
 const SkillsSectionStyle = {
@@ -93,7 +125,8 @@ export const ResumeAreaLayout = () => (
         <Title text={data.aim} fontSize='18px' textAlign='left' margin='0 0 20px 50px'/>
         <div style={WorkXandSkillSectionStyle}>
             <div style={WorkExperienceSectionStyle}>
-                <WorkExperience workExperiences={data.workExperiences}/>
+                <WorkExperiences workExperiences={data.workExperiences}/>
+                <EducationDetails educationDetails={data.educationDetails}/>
             </div>
             <div style={SkillsSectionStyle}>
                 <Skills skills={data.technicalSkills}/>
