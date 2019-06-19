@@ -48,7 +48,7 @@ export const InfoSection = ({sectionHeader, sectionData, taskInfoSectionTitle}) 
             <div style={WorkExperienceLayoutStyle}>
                 <div style={WorkExpTilesStyle}>
                     {sectionData.map((info, index) =>
-                        <div style={WorkExpTileStyle}>
+                        <div key={index} style={WorkExpTileStyle}>
                             <div style={InfoCardTileBoundaryStyle}>
                                 <span style={circle}></span>
                                 {index != sectionData.length - 1 && <span style={borderStyle}></span>}

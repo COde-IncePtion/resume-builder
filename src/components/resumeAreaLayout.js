@@ -73,7 +73,6 @@ const data = {
         {
             organizationName: 'Kendriya Vidyalaya No.3, New Delhi',
             role: '10th',
-            tasks: ["science"],
             timeSpan: {
                 startDate: '01/2017',
                 endDate: '02/2017'

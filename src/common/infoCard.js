@@ -5,7 +5,7 @@ import {colors} from "../theme";
 const InfoCardStyle = {
     lineHeight: '22px',
     marginBottom: '30px',
-    flexGrow:1
+    flexGrow: 1
 };
 
 const LocationWorkPeriodStyle = {
@@ -68,20 +68,23 @@ export const InfoCard = ({cardInfo, cardTitle}) => {
                 <Title text={cardInfo.location} color={colors.lightBlue} fontSize='16px' fontStyle='italic'
                        margin='unset'/>
             </div>
-            <div style={TaskSectionStyle}>
-                <div style={LeftBorderStyle}></div>
-                <div style={TaskDisplaySectionStyle}>
-                    <Title text={cardTitle} color={colors.lightBlue} fontSize='16px' fontStyle='italic'
-                           margin='unset' textAlign='left'/>
-                    {cardInfo.tasks.map(task =>
-                        <div style={TaskTileStyle} key={task}>
-                            <i className="material-icons" style={DashIconStyle}>minimize</i>
-                            <Title key={task} text={task} textAlign='left' fontSize='18px' margin='unset'/>
-                        </div>)
-                    }
+            {
+                cardInfo.tasks &&
+                <div style={TaskSectionStyle}>
+                    <div style={LeftBorderStyle}></div>
+                    <div style={TaskDisplaySectionStyle}>
+                        <Title text={cardTitle} color={colors.lightBlue} fontSize='16px' fontStyle='italic'
+                               margin='unset' textAlign='left'/>
+                        {cardInfo.tasks.map(task =>
+                            <div style={TaskTileStyle} key={task}>
+                                <i className="material-icons" style={DashIconStyle}>minimize</i>
+                                <Title key={task} text={task} textAlign='left' fontSize='18px' margin='0 0 0 4px'/>
+                            </div>)
+                        }
+                    </div>
+                    <div style={RightBorderStyle}></div>
                 </div>
-                <div style={RightBorderStyle}></div>
-            </div>
+            }
 
         </div>
     );

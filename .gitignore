@@ -20,4 +20,5 @@ mb1.log
 *.swp
 
 yarn-error.log
+package-lock.json
 
