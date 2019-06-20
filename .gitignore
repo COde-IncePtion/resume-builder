@@ -21,4 +21,5 @@ mb1.log
 
 yarn-error.log
 package-lock.json
+yarn.lock
 
