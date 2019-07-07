@@ -5,15 +5,17 @@
   "main": "./src/index.js",
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "styled-jsx": "^3.2.1"
   },
   "scripts": {
     "dev": "webpack-dev-server --open --config ./webpack.dev.js ",
     "build": "webpack --config ./webpack.prod.js",
     "test": "jest",
-    "deploy" : "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "babel-preset-next": "^1.2.0",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",

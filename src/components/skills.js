@@ -1,7 +1,6 @@
 import React from 'react';
 import {Cell} from "../common/cell";
 import {Title} from "./title";
-import {colors} from "../theme";
 import {SectionLine} from "./SectionLine";
 
 
