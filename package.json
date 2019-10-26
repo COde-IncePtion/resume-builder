@@ -38,11 +38,16 @@
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.2.1",
     "prettier": "1.17.1",
-    "prop-types": "15.7.2"
+    "prop-types": "15.7.2",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.14.0"
   },
   "jest": {
     "testMatch": [
-      "<rootDir>/src/**/*.spec.js"
+      "<rootDir>/src/**/*.spec.jsx"
+    ],
+    "setupFilesAfterEnv": [
+      "./setupEnzyme.js"
     ]
   }
 }

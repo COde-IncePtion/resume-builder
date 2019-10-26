@@ -31,6 +31,7 @@ Title.defaultProps = {
   fontWeight: "unset",
   padding: "unset",
   textAlign: "unset",
+  margin: "unset",
   fontStyle: "unset"
 };
 
@@ -39,7 +40,7 @@ Title.propTypes = {
   fontSize: PropTypes.string.isRequired,
   textAlign: PropTypes.string,
   fontWeight: PropTypes.string,
-  margin: PropTypes.string.isRequired,
+  margin: PropTypes.string,
   padding: PropTypes.string,
   color: PropTypes.string,
   fontStyle: PropTypes.string

@@ -34,7 +34,6 @@ const PersonalDetails = ({ personalDetails, companyDetails }) => (
         text={`${personalDetails.firstName} ${personalDetails.lastName}`}
         fontSize="44px"
         fontWeight="900"
-        margin="unset"
       />
       <p style={ProfileNameStyle}>{companyDetails.role}</p>
     </div>

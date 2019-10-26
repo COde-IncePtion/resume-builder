@@ -63,7 +63,6 @@ const InfoCard = ({ cardInfo, cardTitle }) => (
       fontSize="24px"
       fontWeight="700"
       padding="0 0 4px 0"
-      margin="unset"
       textAlign="left"
     />
     <Title
@@ -71,7 +70,6 @@ const InfoCard = ({ cardInfo, cardTitle }) => (
       fontSize="24px"
       fontWeight="400"
       padding="4px 0"
-      margin="unset"
       textAlign="left"
     />
     <div style={LocationWorkPeriodStyle}>
@@ -80,14 +78,12 @@ const InfoCard = ({ cardInfo, cardTitle }) => (
         fontSize="16px"
         color={colors.lightBlue}
         fontStyle="italic"
-        margin="unset"
       />
       <Title
         text={cardInfo.location}
         color={colors.lightBlue}
         fontSize="16px"
         fontStyle="italic"
-        margin="unset"
       />
     </div>
     {cardInfo.tasks && (
@@ -99,7 +95,6 @@ const InfoCard = ({ cardInfo, cardTitle }) => (
             color={colors.lightBlue}
             fontSize="16px"
             fontStyle="italic"
-            margin="unset"
             textAlign="left"
           />
           {cardInfo.tasks.map(task => (
