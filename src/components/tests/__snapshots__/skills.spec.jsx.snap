@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Skills 1`] = `
+"<div>
+  <Title text=\\"SKILLS\\" fontWeight=\\"700\\" fontSize=\\"28px\\" textAlign=\\"left\\" margin=\\"0 0 4px 50px\\" color=\\"black\\" padding=\\"unset\\" fontStyle=\\"unset\\" />
+  <SectionLine />
+  <div style={{...}}>
+    <Cell skillName=\\"java\\" />
+    <Cell skillName=\\"react\\" />
+  </div>
+</div>"
+`;
